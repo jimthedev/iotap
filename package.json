@@ -1,0 +1,26 @@
+{
+  "name": "iotap",
+  "version": "1.0.0",
+  "description": "Promisify iota.lib.js methods",
+  "main": "src/index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jimthedev/iotap.git"
+  },
+  "keywords": [],
+  "author": "Jim Cummins <jimthedev@gmail.com> (http://github.com/jimthedev)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jimthedev/iotap/issues"
+  },
+  "homepage": "https://github.com/jimthedev/iotap#readme",
+  "dependencies": {
+    "pify": "^3.0.0"
+  }
+}
