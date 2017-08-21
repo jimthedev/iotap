@@ -1,6 +1,6 @@
 {
   "name": "iotap",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Promisify iota.lib.js methods",
   "main": "src/index.js",
   "directories": {
