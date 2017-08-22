@@ -8,6 +8,10 @@
 npm install --save iota.lib.js iotap
 ```
 
+## Changelog
+
+- 2.0.0 You should now use either .create or .invoke.
+
 ## Full example usage
 
 ```js
@@ -39,10 +43,16 @@ const iota = new IOTA({
     'port': IOTA_PORT
 });
 
-// Pass that instance of iota to iotap along with
-// the name of a function you want to use
-const getSourceBalance = iotap(iota, 'getAccountData')(IOTA_SOURCE_SEED);
-const getDestinationBalance = iotap(iota, 'getAccountData')(IOTA_DESTINATION_SEED);
+// Pass in the instance of iota to iotap
+
+// You can either create an instance
+const i = iotap.create(iota);
+const getSourceBalance = i.getAccountData(IOTA_SOURCE_SEED)
+const getDestinationBalance = i.getAccountData(IOTA_DESTINATION_SEED);
+
+// --- OR invoke ---
+const getSourceBalance = iotap.invoke(iota, 'getAccountData')(IOTA_SOURCE_SEED);
+const getDestinationBalance = iotap.invoke(iota, 'getAccountData')(IOTA_DESTINATION_SEED);
 
 // The result will be a promise that you can use
 // as you'd expect. This example uses Promise.all
